@@ -1,0 +1,58 @@
+.parrot-carousel {
+  position: relative;
+}
+.parrot-carousel .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.parrot-carousel .carousel-enter-active, .parrot-carousel .carousel-exit-active {
+  transition: all 500ms linear;
+}
+.parrot-carousel .carousel-enter {
+  transform: translateX(100%);
+  opacity: 0.8;
+}
+.parrot-carousel .carousel-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.parrot-carousel .carousel-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+.parrot-carousel .carousel-exit-active {
+  transform: translateX(-100%);
+  opacity: 0.8;
+}
+.parrot-carousel-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.parrot-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+}
+.parrot-carousel-dots-item {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.parrot-carousel-dots-item:not(:last-child) {
+  margin-right: 10px;
+}
+.parrot-carousel-dots-item.active {
+  opacity: 1;
+}
